@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #divMain{
+            width:98vw;
+            height:97vh;
+            display:grid;
+            grid-template-rows:1fr 10fr;
+        }
+        #divTitle{
+            display:grid;
+            grid-template-columns:6fr 4fr;
+        }
+        #divTitleBtn{
+            display:grid;
+            grid-template-columns:4fr 2fr;
+        }
+        #btnFile{
+            height:100%;
+        }
+        #btnFile{
+            display:none;
+        }
+        .btnFileName{
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="divMain">
+        <div id="divTitle">
+            <h3>MnF_Wms</h3>
+            <div id="divTitleBtn">
+                <div class="divTitleFile">
+                    <input class="btnFileName" value="첨부파일" placeholder="첨부파일">
+                    <label for="btnFile">파일찾기</label>
+                    <input type="file" title="FileName" id="btnFile">
+                </div>
+                <button id="btnUpdate">자료수정</button>
+            </div>
+        </div>
+        <div id="divTable"></div>
+    </div>
+    
+</body>
+</html>
