@@ -38,13 +38,25 @@
                 <div class="divTitleFile">
                     <input class="btnFileName" value="첨부파일" placeholder="첨부파일">
                     <label for="btnFile">파일찾기</label>
-                    <input type="file" title="FileName" id="btnFile">
+                    <input type="file" title="FileName" id="btnFile" onchange="attachFile(event)">
                 </div>
                 <button id="btnUpdate">자료수정</button>
             </div>
         </div>
         <div id="divTable"></div>
     </div>
+    <script>
+        let divTable = document.getElementById("divTable");
+        const test =document.createElement("h3");
+        test.innerHTML="text"
+        divTable.appendChild(test);
+
+        function attachFile(event){
+            divTable.replaceChildren();
+            const fileName = document.getElementById("btnFile").files[0].name;
+            document.getElementsByClassName("btnFileName")[0].value=fileName;
+        }
+    </script>
     
 </body>
 </html>
